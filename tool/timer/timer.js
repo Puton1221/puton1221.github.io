@@ -78,7 +78,7 @@ function getMessage(language, messageKey) {
       'years': '年',
       'months': '月',
       'days': '日',
-      'hours': '時',
+      'hours': '時間',
       'minutes': '分',
       'seconds': '秒',
     },
