@@ -258,7 +258,7 @@ function buildUrl(language, startDate, durationMs, progressMessage, finishedMess
     parameters.append('style', styling);
   }
 
-  return 'https://scpwiki.github.io/timer/timer.html?' + parameters;
+  return 'https://puton1221.github.io/tool/timer/timer.html?' + parameters;
 }
 
 function buildWikitext(template, url, height, width) {
