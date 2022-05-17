@@ -81,6 +81,7 @@ function getMessage(language, messageKey) {
       'hours': '時',
       'minutes': '分',
       'seconds': '秒',
+    },
   };
 
   // Special case:
