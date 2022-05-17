@@ -352,11 +352,3 @@ function setup() {
 }
 
 setTimeout(setup, 5);
-
-  //コピーボタンの実装
-function copy() {
-  var text = document.getElementsByTagName("textarea")[0];
-  text.select();
-  document.execCommand("copy");
-};
-
