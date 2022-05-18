@@ -115,3 +115,11 @@ function initGenerators() {
         batchDelete();
     });
 }
+
+//コピーボタンの実装
+function copy() {
+  var copyTarget = document.getElementById("code");
+  copyTarget.select();
+  document.execCommand("Copy");
+  alert("コピーしました");
+};
