@@ -76,7 +76,7 @@ function getMessage(language, messageKey) {
       'timer-progress': '残り時間:',
       'timer-finished': '経過時間:',
       'years': '年',
-      'months': '月',
+      'months': 'ヶ月',
       'days': '日',
       'hours': '時間',
       'minutes': '分',
