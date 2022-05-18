@@ -117,7 +117,7 @@ function initGenerators() {
 }
 
 //コピーボタンの実装
-function copy() {
+function copy {
   var copyTarget = document.getElementById("code");
   copyTarget.select();
   document.execCommand("Copy");
