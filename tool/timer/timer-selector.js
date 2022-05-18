@@ -509,5 +509,5 @@ function copy() {
   var copyTarget = document.getElementById("output");
   copyTarget.select();
   document.execCommand("Copy");
-  alert("コピーしました : " + copyTarget.value);
+  alert("コピーしました");
 };
