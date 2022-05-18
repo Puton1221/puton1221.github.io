@@ -505,7 +505,7 @@ function setup() {
 setTimeout(setup, 5);
 
   //コピーボタンの実装
-function copy() {
+function copy {
   var copyTarget = document.getElementById("output");
   copyTarget.select();
   document.execCommand("Copy");
