@@ -1,0 +1,64 @@
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/tool/timer-jp/timer-gen.js"></script>
+    <style type="text/css">
+     body {
+     font-family: Verdana, Arial, Helvetica, sans-serif;
+     font-size: 10pt;
+     }
+     h1, h2, h3, h4, h5, h6 {
+     margin: 5px 0;
+     }
+     blockquote {
+     margin: 5px 10px;
+     padding: 10px 20px;
+     border: dashed 1px #808080;
+     background-color: #f0f0f0;
+     }
+    </style>
+  </head>
+  <body>
+    <div><strong>時刻表示は閲覧したコンピュータの内部時間を基に計算します。</strong></div>
+
+    <form id="genForm" action="javascript:generateDeletionLink()">
+     <div id="genFormContents">
+     <div>タイマー種別: <input type="radio" name="type" value="0" checked="checked"> 削除猶予 &mdash;
+     <input type="radio" name="type" value="1" /> BAN期間 &mdash;
+     <input type="radio" name="type" value="2" /> その他一般
+     <input id="notice" type="checkbox" name="notice" value="1" />コードに削除通知文を追加
+     </div>
+     <div>削除日時:
+     <select id="genYear" name="year"></select>年
+     <select id="genMonth" name="month"></select>月
+     <select id="genDay" name="day"></select>日
+
+     <select id="genHour" name="hour"></select>時
+     <select id="genMinute" name="minute"></select>分
+      <button type="submit">タイマー作成</button>
+     </div>
+     </div>
+    </form>
+    <div><strong>指定時間経過後の日時に設定する</strong></div>
+    <form id="aftForm" action="javascript:setDeletionTimer()">
+     <div id="aftFormContents">
+     <select id="aftDay" name="day"></select>日
+     <select id="aftHour" name="hour"></select>時間
+     <select id="aftMinute" name="minute"></select>分
+     <button type="submit">設定</button>
+     </div>
+     <div>
+     <button type="button" id="batchDel">削除通知一括設定</button>（通常の削除通知はこのボタンを押してください）
+     </div>
+    </form>
+    <hr />
+    <div id="generated" style="display: none;">
+     <div>タイマーを貼るには下記のコードをコピーしてください。</div>
+     <div>
+     <blockquote><strong id="code"></strong></blockquote>
+     </div>
+     <div>
+     <iframe style="width: 400px; height: 50px;"></iframe>
+     </div>
+    </div>
+    <script type="text/javascript">
+     $(document).ready(initGenerators);
+    </script>
