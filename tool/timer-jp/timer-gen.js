@@ -63,7 +63,7 @@ function initGenerators() {
     var i;
     var html = "";
 
-    for (i = 2014; i < 2024; i++) {
+    for (i = 2014; i < 2060; i++) {
         html += '<option value="' + i + '">' + i + "</option>";
     }
     $("#genYear").html(html).val(now.getFullYear());
