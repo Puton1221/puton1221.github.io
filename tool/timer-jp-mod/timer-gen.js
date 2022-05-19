@@ -4,13 +4,13 @@ function generateDeletionLink() {
     var artime = document.getElementById("end-time")
     var spdate = ardate.value.split("-")
     var sptime = artime.value.split(":")
-    var month = spdate[1]-1;
+    var month = spdate[1];
     var day = spdate[2];
     var year = spdate[0];
     var hour = sptime[0];
     var minute = sptime[1];
     var type = $("input:radio[name=type]:checked").val();
-    var timestamp = new Date(year, month, day, hour, minute, 0, 0);
+    var timestamp = new Date(year, month-1, day, hour, minute, 0, 0);
     var code = "";
 
     var url =
