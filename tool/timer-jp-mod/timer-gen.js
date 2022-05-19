@@ -41,11 +41,11 @@ function setDeletionTimer() {
             (minute * 60 * 1000),
     );
 
-    spdate[0](timestamp.getFullYear());
-    spdate[1](timestamp.getMonth());
-    spdate[2](timestamp.getDate());
-    sptime[0](timestamp.getHours());
-    sptime[1](timestamp.getMinutes());
+    $("#genYear").val(timestamp.getFullYear());
+    $("#genMonth").val(timestamp.getMonth());
+    $("#genDay").val(timestamp.getDate());
+    $("#genHour").val(timestamp.getHours());
+    $("#genMinute").val(timestamp.getMinutes());
     $("input:radio[name=type]:eq(0)").prop("checked", true);
 
     generateDeletionLink();
