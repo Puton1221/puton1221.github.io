@@ -4,7 +4,7 @@ function generateDeletionLink() {
     var artime = document.getElementById("end-time")
     var spdate = ardate.value.split("-")
     var sptime = artime.value.split(":")
-    var month = spdate[1];
+    var month = spdate[1]-1;
     var day = spdate[2];
     var year = spdate[0];
     var hour = sptime[0];
