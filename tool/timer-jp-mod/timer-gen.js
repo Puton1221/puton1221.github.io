@@ -41,11 +41,11 @@ function setDeletionTimer() {
             (minute * 60 * 1000),
     );
 
-    $("#genYear").val(timestamp.getFullYear());
-    $("#genMonth").val(timestamp.getMonth());
-    $("#genDay").val(timestamp.getDate());
-    $("#genHour").val(timestamp.getHours());
-    $("#genMinute").val(timestamp.getMinutes());
+    spdate[0](timestamp.getFullYear());
+    spdate[1](timestamp.getMonth());
+    spdate[2](timestamp.getDate());
+    sptime[0](timestamp.getHours());
+    sptime[1](timestamp.getMinutes());
     $("input:radio[name=type]:eq(0)").prop("checked", true);
 
     generateDeletionLink();
@@ -67,7 +67,7 @@ function initGenerators() {
     var i;
     var html = "";
 
-    for (i = 2014; i < 2060;) {
+    for (i = 2014; i < 2060; i++) {
         html += '<option value="' + i + '">' + i + "</option>";
     }
     spdate[0].html(html).val(now.getFullYear());
