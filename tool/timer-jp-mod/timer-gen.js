@@ -10,7 +10,7 @@ function generateDeletionLink() {
     var hour = sptime[0];
     var minute = sptime[1];
     var type = $("input:radio[name=type]:checked").val();
-    var timestamp = new Date(year, month-1, day, hour, minute, 0, 0);
+    var timestamp = new Date(spdate[0], spdate[1]-1, spdate[2], sptime[0], sptime[1], 0, 0);
     var code = "";
 
     var url =
@@ -41,13 +41,6 @@ function setDeletionTimer() {
             (minute * 60 * 1000),
     );
 
-    spdate[0](timestamp.getFullYear());
-    spdate[1](timestamp.getMonth());
-    spdate[2](timestamp.getDate());
-    sptime[0](timestamp.getHours());
-    sptime[1](timestamp.getMinutes());
-    $("input:radio[name=type]:eq(0)").prop("checked", true);
-
     generateDeletionLink();
 }
 
@@ -63,39 +56,48 @@ function batchDelete() {
 
 //ページ表示時の初期処理
 function initGenerators() {
+    var ardate = document.getElementById("end-date")
+    var artime = document.getElementById("end-time")
+    var spdate = ardate.value.split("-")
+    var sptime = artime.value.split(":")
+    var month = spdate[1];
+    var day = spdate[2];
+    var year = spdate[0];
+    var hour = sptime[0];
+    var minute = sptime[1];
     var now = new Date();
     var i;
     var html = "";
 
-    for (i = 2014; i < 2060; i++) {
+    for (i = 2014; i < 2024; i++) {
         html += '<option value="' + i + '">' + i + "</option>";
     }
-    spdate[0].html(html).val(now.getFullYear());
+    year.html(html).val(now.getFullYear());
     html = "";
 
     for (i = 0; i < 12; i++) {
         html += '<option value="' + i + '">' + (i + 1) + "</option>";
     }
-    spdate[1].html(html).val(now.getMonth());
+    month.html(html).val(now.getMonth());
     html = "";
 
     for (i = 1; i < 32; i++) {
         html += '<option value="' + i + '">' + i + "</option>";
     }
-    spdate[2].html(html).val(now.getDate());
+    day.html(html).val(now.getDate());
     html = "";
 
     for (i = 0; i < 24; i++) {
         html += '<option value="' + i + '">' + i + "</option>";
     }
-    sptime[0].html(html).val(now.getHours());
+    hour.html(html).val(now.getHours());
     html = "";
 
     for (i = 0; i < 60; i++) {
         html += '<option value="' + i + '">' + (i < 10 ? "0" : "") + i +
             "</option>";
     }
-    sptime[1].html(html).val(now.getMinutes());
+    minute.html(html).val(now.getMinutes());
     html = "";
 
     for (i = 0; i < 31; i++) {
