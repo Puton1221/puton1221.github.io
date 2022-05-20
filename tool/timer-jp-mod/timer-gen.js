@@ -32,9 +32,17 @@ function generateDeletionLink() {
 
 //タイマーの日時を指定時間後にセットする
 function setDeletionTimer() {
-    var day = $("#aftDay").val();
-    var hour = $("#aftHour").val();
-    var minute = $("#aftMinute").val();
+    var SECONDS_MS = 1000;
+    var MINUTES_MS = SECONDS_MS * 60;
+    var HOURS_MS = MINUTES_MS * 60;
+    var DAYS_MS = HOURS_MS * 24;
+    var valueElement = document.getElementById('duration-custom-value');
+    var value = parseInt(valueElement.value);
+    
+    var unitElement = document.getElementById('duration-custom-unit');
+    var unit = parseInt(unitElement.value);
+    
+    return value * unit;
     var now = new Date();
     var timestamp = new Date(
         now.getTime() + (day * 24 * 60 * 60 * 1000) + (hour * 60 * 60 * 1000) +

@@ -30,10 +30,16 @@
     <div><strong>指定時間経過後の日時に設定する</strong></div>
     <form id="aftForm" action="javascript:setDeletionTimer()">
      <div id="aftFormContents">
-     <select id="aftDay" name="day"></select>日
-     <select id="aftHour" name="hour"></select>時間
-     <select id="aftMinute" name="minute"></select>分
+      <input id="duration-custom-value" class="radio-text" type="number" size="6"></input>
+      <select id="duration-custom-unit">
+      <option id="unit-minute" value="60000">分間</option>
+      <option id="unit-hour" value="3600000">時間</option>
+      <option id="unit-day" value="86400000">日間</option>
+      <option id="unit-week" value="604800000">週間</option>
+      <option id="unit-month" value="2592000000">ヶ月間</option>
+      <option id="unit-year" value="31536000000">年間</option>
      <button type="submit">設定</button>
+     </select>
      </div>
      <div>
      <button type="button" id="batchDel">削除通知一括設定</button>（通常の削除通知はこのボタンを押してください）
