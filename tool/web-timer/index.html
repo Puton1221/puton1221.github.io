@@ -8,7 +8,7 @@
         <div id="largeminute"class="time_display"style="display: inline-block; _display: inline;"><span id="minute_display">00</span></div>:
             <div id="largesecond" class="time_display"style="display: inline-block; _display: inline;"><span id="second_display">00</span></div></h1><br>
       </div>
-            <div id="bargroup">
+            <div id="bargroup" class="bargroup">
 <div class="time">時：<span id="hour_value">00</span><input id="hour" type = "range" min = "0" max = "99" step = "1" value="0" style="width:440px;height:10px;margin-left:10px"></div>
 <div class="time">分：<span id="minute_value">00</span><input id="minute" type="range" min="0" max="59" step="1"  value="0" style="width:440px;height:10px;margin-left:10px;"></div>
 <div class="time">秒：<span id="second_value">00</span><input id="second" type="range" min="0" max="59" step="1" value="0"  style="width:440px;height:10px;margin-left:10px"></div></div>
@@ -52,7 +52,7 @@
         var onthewayallsec = 0;
         
         function start(){
-            document.getElementById("bargroup").style.visibility ="hidden";
+            document.getElementById("bargroup").style.visibility ="disabled";
             document.getElementById("start_button").disabled="disabled";
             document.getElementById("reset_button").disabled="disabled";
             document.getElementById("stop_button").disabled=""
