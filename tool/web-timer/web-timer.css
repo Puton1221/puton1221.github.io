@@ -2,6 +2,12 @@
     text-align: center;
     margin-top: 5em;
 }
+
+.button_format {
+  text-align: center;
+  margin-top: 10px;
+}
+
 input[type="button"] {
   background-color: #e7e7e7;
   border: none;
@@ -11,8 +17,8 @@ input[type="button"] {
   display: inline-block;
   font-size: 16px;
   text-align: center;
-  margin-top: 10px;
 }
+
 
 @media all {
 .bargroup{
