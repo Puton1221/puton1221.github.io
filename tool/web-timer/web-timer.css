@@ -1,6 +1,5 @@
-.main_timer {
-    text-align: center;
-    margin-top: 5em;
+.main_timer{
+  text-align: center;
 }
 
 .button_format {
@@ -9,7 +8,7 @@
 }
 
 input[type="button"] {
-  background-color: #e7e7e7;
+  background-color: #ccc;
   border: none;
   color: black;
   padding: 15px 32px;
@@ -19,6 +18,19 @@ input[type="button"] {
   text-align: center;
 }
 
+input[type="button"]:disabled{
+  background-color: #e7e7e7;
+  color: #696969;
+}
+
+span[id="hour_display"],
+span[id="minute_display"],
+span[id="second_display"],
+span[id="coron"],
+.time_display{
+  margin-top: 2em;
+  font-size: 60px;
+}
 
 @media all {
 .bargroup{

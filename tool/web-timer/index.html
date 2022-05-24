@@ -4,8 +4,8 @@
     </head>
   <body>
       <div class="main_timer">
-    <h1 id="varvar"><div  id="largehour" class="time_display"style="display: inline-block; _display: inline;"><span id="hour_display">00</span></div>:
-        <div id="largeminute"class="time_display"style="display: inline-block; _display: inline;"><span id="minute_display">00</span></div>:
+    <h1 id="varvar"><div  id="largehour" class="time_display"style="display: inline-block; _display: inline;"><span id="hour_display">00</span></div><span id="coron"> : </span>
+        <div id="largeminute"class="time_display"style="display: inline-block; _display: inline;"><span id="minute_display">00</span></div><span id="coron"> : </span>
             <div id="largesecond" class="time_display"style="display: inline-block; _display: inline;"><span id="second_display">00</span></div></h1><br>
       </div>
             <div id="bargroup" class="bargroup">
@@ -16,12 +16,12 @@
     <div class="button_format">
     <input type="button" id="start_button" value="start" onclick="start()">
     <input type="button" id="stop_button" value="stop" onclick="stop()" disabled>
-    <input type="button" id="reset_button" value="reset" onclick="reset()" disabled>
+    <input type="button" id="reset_button" value="reset" onclick="reset()" disabled><br>
       </div>
     
     <script>
   var time = document.getElementsByClassName('time');
-  var time_display=document.getElementsByClassName("time_display");
+  var time_display = document.getElementsByClassName("time_display");
   function rangeValue(time, target, target2) {
     return function(){
         if(time.value >= 10){
@@ -127,7 +127,7 @@
         }
         
         function reset(){
-            location.reload();
+          location.reload();
         }
            </script>
       </body>
