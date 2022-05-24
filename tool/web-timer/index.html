@@ -13,11 +13,9 @@
 <div class="time">分：<span id="minute_value">00</span><input id="minute" type="range" min="0" max="59" step="1"  value="0" style="width:440px;height:10px;margin-left:10px;"></div>
 <div class="time">秒：<span id="second_value">00</span><input id="second" type="range" min="0" max="59" step="1" value="0"  style="width:440px;height:10px;margin-left:10px"></div></div>
      
-    <div class="timer_button">
-    <input type="button" id="start_button" value="start" style="background-color:aliceblue;text-decoration-color: aqua" onclick="start()">
-    <input type="button" id="stop_button" value="stop" style="background-color:aliceblue;text-decoration-color: aqua" onclick="stop()" disabled>
-    <input type="button" id="reset_button" value="reset" style="background-color:aliceblue;text-decoration-color: aqua" onclick="reset()" disabled><br>
-    </div>
+    <input type="button" id="start_button" value="start" class="timer_button" onclick="start()">
+    <input type="button" id="stop_button" value="stop" class="timer_button" onclick="stop()" disabled>
+    <input type="button" id="reset_button" value="reset" class="timer_button" onclick="reset()" disabled><br>
     
     <script>
   var time = document.getElementsByClassName('time');
