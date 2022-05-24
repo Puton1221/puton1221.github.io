@@ -2,9 +2,7 @@
     text-align: center;
     margin-top: 5em;
 }
-.btn,
-a.btn,
-button.btn {
+.timer_button {
   background-color: #e7e7e7;
   border: none;
   color: black;
@@ -15,6 +13,7 @@ button.btn {
   text-align: center;
   margin-top: 10px;
 }
+
 @media all {
 .bargroup{
     text-align: center;
