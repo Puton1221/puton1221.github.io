@@ -21,3 +21,11 @@
     font-display: swap;
     src: url("./fonts/wingding.ttf") format("truetype");
 }
+
+@font-face {
+    font-family: "Determination";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./fonts/DeterminationJP.ttf") format("truetype");
+}
