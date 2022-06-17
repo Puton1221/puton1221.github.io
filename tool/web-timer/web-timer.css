@@ -28,7 +28,6 @@ span[id="minute_display"],
 span[id="second_display"],
 span[id="coron"],
 .time_display{
-  margin-top: 2em;
   font-size: 60px;
 }
 
