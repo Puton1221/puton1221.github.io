@@ -29,3 +29,19 @@
     font-display: swap;
     src: url("./fonts/DeterminationJP.ttf") format("truetype");
 }
+
+@font-face {
+    font-family: "Comic Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./fonts/comic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Mochiy Pop One";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./fonts/MochiyPopOne-Regular.ttf") format("truetype");
+}
